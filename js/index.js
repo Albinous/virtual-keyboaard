@@ -22,9 +22,13 @@ class KeyName {
    }
 }
 
-let keys = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\', 'Del', 'Caps Lock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '"', 'Enter', 'Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '&#9650', 'Shift2', 'Ctrl', 'Win', 'Alt', 'Space', 'Alt2', '&#5130', '&#9660', '&#5125', 'Ctrl2'];
+let keys = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\', 'Del', 'Caps Lock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '"', 'Enter', 'Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '&#9650', 'Shift', 'Ctrl', 'Win', 'Alt', 'Space', 'Alt', '&#5130', '&#9660', '&#5125', 'Ctrl'];
 
-let keysRu = ['ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '\\', 'Del', 'Caps Lock', 'ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э', 'Enter', 'Shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '.', '&#9650', 'Shift2', 'Ctrl', 'Win', 'Alt', 'Пробел', 'Alt', '&#5130', '&#9660', '&#5125', 'Ctrl'];
+let keysRu = ['ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '\\', 'Del', 'Caps Lock', 'ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э', 'Enter', 'Shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '.', '&#9650', 'Shift', 'Ctrl', 'Win', 'Alt', 'Пробел', 'Alt', '&#5130', '&#9660', '&#5125', 'Ctrl'];
+
+let otherSymbolsEn = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', 'Backspace', 'Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '{', '}', '|', 'Del', 'Caps Lock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ':', '"', 'Enter', 'Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', '<', '>', '?', '&#9650', 'Shift', 'Ctrl', 'Win', 'Alt', 'Space', 'Alt', '&#5130', '&#9660', '&#5125', 'Ctrl'];
+
+let otherSymbolsRu = ['Ё', '!', '"', '№', ';', '%', ':', '?', '*', '(', ')', '_', '+', 'Backspace', 'Tab', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '/', 'Del', 'Caps Lock', 'ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э', 'Enter', 'Shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', ',', '&#9650', 'Shift', 'Ctrl', 'Win', 'Alt', 'Пробел', 'Alt', '&#5130', '&#9660', '&#5125', 'Ctrl'];
 
 function longKey(key) {
    return item.classList.add(`${key}-key`);
@@ -50,33 +54,30 @@ for (let i = 0; i < keys.length; i += 1) {
    } else if (keys[i] === 'Enter') {
       keyboardKeys.append(row);
       createRow();
-   } else if (keys[i] === 'Shift2') {
+   } else if (keys[i] === 'Shift' && i === 54) {
       item.classList.add('shift-key');
       item.classList.add('shift-right');
-      item.innerHTML = 'Shift';
       keyboardKeys.append(row);
       createRow();
-   } else if (keys[i] === 'Ctrl2') {
+   } else if (keys[i] === 'Ctrl' && i === 63) {
       item.classList.add('ctrl-key');
       item.classList.add('ctrl-right');
-      item.innerHTML = 'Ctrl';
       keyboardKeys.append(row);
       createRow();
    }
 
-   if (keys[i] === 'Shift') {
+   if (keys[i] === 'Shift' && i !== 54) {
       item.classList.add('shift-key');
       item.classList.add('shift-left');
    }
-   if (keys[i] === 'Ctrl') {
+   if (keys[i] === 'Ctrl' && i !== 63) {
       item.classList.add('ctrl-key');
       item.classList.add('ctrl-left');
    }
-   if (keys[i] === 'Alt') {
+   if (keys[i] === 'Alt' && i !== 60) {
       item.classList.add('alt-left');
    }
-   if (keys[i] === 'Alt2') {
-      item.innerHTML = 'Alt';
+   if (keys[i] === 'Alt' && i === 60) {
       item.classList.add('alt-key');
       item.classList.add('alt-right');
    }
@@ -94,20 +95,71 @@ for (let i = 0; i < keys.length; i += 1) {
 }
 
 const keyDownEvent = (e) => {
+   let lang = localStorage.getItem('lang');
+   if (e.ctrlKey && e.altKey) {
+      for (let i = 0; i < keysArr.length; i++) {
+         if (keysArr[i].innerHTML === keys[i]) {
+            keysArr[i].innerHTML = keysRu[i];
+         } else {
+            keysArr[i].innerHTML = keys[i];
+         }
+      }
+      if (lang === 'en') {
+         lang = 'ru';
+         console.log(lang);
+         localStorage.setItem('lang', lang);
+      } else {
+         lang = 'en';
+         console.log(lang);
+         localStorage.setItem('lang', lang);
+      }
+   }
    for (let i = 0; i < keysArr.length; i++) {
-      if (e.key === keysArr[i].getAttribute('keyName') || e.key === keysArr[i].getAttribute('lowerName') || e.code === keysArr[i].innerHTML) {
+      let value = keysArr[i].innerHTML;
+      if (e.key === keysArr[i].getAttribute('keyName') || e.key === keysArr[i].getAttribute('lowerName')) {
+         e.preventDefault();
          keysArr[i].classList.add('active');
          keysArr[i].classList.remove('remove');
-         console.log(e.key);
+         if (keysArr[29].classList.contains('active')) {
+            TEXTAREA_INPUT.value += value.toUpperCase();
+         } else {
+            TEXTAREA_INPUT.value += value;
+         }
       }
-
-      console.log(e.code);
 
       if (e.code === 'ShiftLeft' && keysArr[i].classList.contains('shift-left')) {
          keysArr[i].classList.add('active');
+         keysArr.forEach((key, index) => {
+            let keyIn = key;
+            if (lang === 'en') {
+               keyIn.innerHTML = otherSymbolsEn[index];
+               if (keyIn.innerHTML.length < 2) {
+                  keyIn.innerHTML = keyIn.innerHTML.toUpperCase();
+               }
+            } else {
+               keyIn.innerHTML = otherSymbolsRu[index];
+               if (keyIn.innerHTML.length < 2) {
+                  keyIn.innerHTML = keyIn.innerHTML.toUpperCase();
+               }
+            }
+         });
       }
       if (e.code === 'ShiftRight' && keysArr[i].classList.contains('shift-right')) {
          keysArr[i].classList.add('active');
+         keysArr.forEach((key, index) => {
+            let keyIn = key;
+            if (lang === 'en') {
+               keyIn.innerHTML = otherSymbolsEn[index];
+               if (keyIn.innerHTML.length < 2) {
+                  keyIn.innerHTML = keyIn.innerHTML.toUpperCase();
+               }
+            } else {
+               keyIn.innerHTML = otherSymbolsRu[index];
+               if (keyIn.innerHTML.length < 2) {
+                  keyIn.innerHTML = keyIn.innerHTML.toUpperCase();
+               }
+            }
+         });
       }
       if (e.code === 'ControlLeft' && keysArr[i].classList.contains('ctrl-left')) {
          keysArr[i].classList.add('active');
@@ -125,25 +177,27 @@ const keyDownEvent = (e) => {
          keysArr[i].classList.add('active');
       }
 
-      let value = keysArr[i].innerHTML;
-
       if (e.code === 'CapsLock' && keysArr[i].classList.contains('capslock-key')) {
          keysArr[i].classList.toggle('active');
-         value = value.toUpperCase();
-      }
-   }
-   if (e.ctrlKey && e.altKey) {
-      for (let i = 0; i < keysArr.length; i++) {
-         if (keysArr[i].innerHTML === keys[i]) {
-            keysArr[i].innerHTML = keysRu[i];
-         } else {
-            keysArr[i].innerHTML = keys[i];
-         }
       }
    }
 };
 
 const keyUpEvent = (e) => {
+   let lang = localStorage.getItem('lang');
+   if (e.ctrlKey && e.altKey) {
+      for (let i = 0; i < keysArr.length; i++) {
+         if (keysArr[i].innerHTML === keys[i]) {
+            keysArr[i].innerHTML = keysRu[i];
+            lang = 'en';
+            localStorage.setItem('lang', lang);
+         } else {
+            keysArr[i].innerHTML = keys[i];
+            lang = 'ru';
+            localStorage.setItem('lang', lang);
+         }
+      }
+   }
    for (let i = 0; i < keysArr.length; i++) {
       if (e.key === keysArr[i].getAttribute('keyName') || e.key === keysArr[i].getAttribute('lowerName') || e.code === keysArr[i].innerHTML || e.code === keysArr[i].getAttribute('keyCode')) {
          keysArr[i].classList.remove('active');
@@ -152,9 +206,37 @@ const keyUpEvent = (e) => {
 
       if (e.code === 'ShiftLeft' && keysArr[i].classList.contains('shift-left')) {
          keysArr[i].classList.remove('active');
+         keysArr.forEach((key, index) => {
+            let keyIn = key;
+            if (lang === 'en') {
+               keyIn.innerHTML = keys[index];
+               if (keyIn.innerHTML.length < 2) {
+                  keyIn.innerHTML = keyIn.innerHTML.toLowerCase();
+               }
+            } else {
+               keyIn.innerHTML = keysRu[index];
+               if (keyIn.innerHTML.length < 2) {
+                  keyIn.innerHTML = keyIn.innerHTML.toLowerCase();
+               }
+            }
+         });
       }
       if (e.code === 'ShiftRight' && keysArr[i].classList.contains('shift-right')) {
          keysArr[i].classList.remove('active');
+         keysArr.forEach((key, index) => {
+            let keyIn = key;
+            if (lang === 'en') {
+               keyIn.innerHTML = keys[index];
+               if (keyIn.innerHTML.length < 2) {
+                  keyIn.innerHTML = keyIn.innerHTML.toLowerCase();
+               }
+            } else {
+               keyIn.innerHTML = keysRu[index];
+               if (keyIn.innerHTML.length < 2) {
+                  keyIn.innerHTML = keyIn.innerHTML.toLowerCase();
+               }
+            }
+         });
       }
       if (e.code === 'ControlLeft' && keysArr[i].classList.contains('ctrl-left')) {
          keysArr[i].classList.remove('active');
@@ -184,17 +266,44 @@ const isCapsLock = () => {
 let counter = 0;
 
 keysArr.forEach(key => {
+   let lang = localStorage.getItem('lang');
    key.addEventListener('mousedown', () => {
       key.classList.add('active');
+      if (key.innerHTML === 'Shift') {
+         keysArr.forEach((keyMouse, index) => {
+            let keyIn = keyMouse;
+            if (lang === 'en') {
+               keyIn.innerHTML = otherSymbolsEn[index];
+               if (keyIn.innerHTML.length < 2) {
+                  keyIn.innerHTML = keyIn.innerHTML.toUpperCase();
+               }
+            } else {
+               keyIn.innerHTML = otherSymbolsRu[index];
+               if (keyIn.innerHTML.length < 2) {
+                  keyIn.innerHTML = keyIn.innerHTML.toUpperCase();
+               }
+            }
+         });
+      }
    });
    key.addEventListener('mouseup', () => {
       key.classList.remove('active');
-   });
-   key.addEventListener('keydown', () => {
-      key.classList.add('active');
-   });
-   key.addEventListener('keyup', () => {
-      key.classList.remove('active');
+      if (key.innerHTML === 'Shift') {
+         keysArr.forEach((keyMouse, index) => {
+            let keyIn = keyMouse;
+            if (lang === 'en') {
+               keyIn.innerHTML = keys[index];
+               if (keyIn.innerHTML.length < 2) {
+                  keyIn.innerHTML = keyIn.innerHTML.toLowerCase();
+               }
+            } else {
+               keyIn.innerHTML = keysRu[index];
+               if (keyIn.innerHTML.length < 2) {
+                  keyIn.innerHTML = keyIn.innerHTML.toLowerCase();
+               }
+            }
+         });
+      }
    });
    key.addEventListener('click', () => {
       let value = key.innerHTML;
@@ -213,7 +322,6 @@ keysArr.forEach(key => {
          }
          value = '';
          TEXTAREA_INPUT.value += value;
-         console.log(value);
 
          break;
 
@@ -232,18 +340,41 @@ keysArr.forEach(key => {
          TEXTAREA_INPUT.value += value;
 
          break;
+      case 'Shift':
+         value = '';
+         TEXTAREA_INPUT.value += value;
+         break;
       default:
          value = key.innerHTML.toLowerCase();
 
          value = isCapsLock() ? key.innerHTML.toUpperCase() : key.innerHTML.toLowerCase();
          TEXTAREA_INPUT.value += value;
 
-         console.log(TEXTAREA_INPUT.value);
-
          break;
       }
    });
 });
+
+function setLocalStorage() {
+   let lang = localStorage.getItem('lang');
+   localStorage.setItem('lang', lang);
+}
+
+function getLocalStorage() {
+   const language = localStorage.getItem('lang');
+   if (language === 'en') {
+      for (let i = 0; i < keysArr.length; i++) {
+         keysArr[i].innerHTML = keys[i];
+      }
+   } else {
+      for (let i = 0; i < keysArr.length; i++) {
+         keysArr[i].innerHTML = keysRu[i];
+      }
+   }
+}
+window.addEventListener('load', getLocalStorage);
+
+window.addEventListener('beforeunload', setLocalStorage);
 
 CONTAINER.classList.add('container');
 TEXTAREA_INPUT.cols = 100;
@@ -258,7 +389,3 @@ KEYBOARD.append(keyboardKeys);
 
 window.addEventListener('keydown', keyDownEvent);
 window.addEventListener('keyup', keyUpEvent);
-// keyboardKeys.addEventListener('mousedown', mouseDown);
-// window.addEventListener('mouseup', mouseUp);
-
-console.log(keysArr);
