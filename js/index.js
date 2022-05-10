@@ -93,15 +93,25 @@ for (let i = 0; i < keys.length; i += 1) {
    }
 }
 
+let lang = 'en';
+
+function getLang(lang) {
+   return lang;
+}
+
 const keyDownEvent = (e) => {
    for (let i = 0; i < keysArr.length; i++) {
-      if (e.key === keysArr[i].getAttribute('keyName') || e.key === keysArr[i].getAttribute('lowerName') || e.code === keysArr[i].innerHTML) {
+      let value = keysArr[i].innerHTML;
+      if (e.key === keysArr[i].getAttribute('keyName') || e.key === keysArr[i].getAttribute('lowerName')) {
+         e.preventDefault();
          keysArr[i].classList.add('active');
          keysArr[i].classList.remove('remove');
-         console.log(e.key);
+         if (keysArr[29].classList.contains('active')) {
+            TEXTAREA_INPUT.value += value.toUpperCase();
+         } else {
+            TEXTAREA_INPUT.value += value;
+         }
       }
-
-      console.log(e.code);
 
       if (e.code === 'ShiftLeft' && keysArr[i].classList.contains('shift-left')) {
          keysArr[i].classList.add('active');
@@ -125,19 +135,20 @@ const keyDownEvent = (e) => {
          keysArr[i].classList.add('active');
       }
 
-      let value = keysArr[i].innerHTML;
-
       if (e.code === 'CapsLock' && keysArr[i].classList.contains('capslock-key')) {
          keysArr[i].classList.toggle('active');
-         value = value.toUpperCase();
       }
    }
    if (e.ctrlKey && e.altKey) {
       for (let i = 0; i < keysArr.length; i++) {
          if (keysArr[i].innerHTML === keys[i]) {
             keysArr[i].innerHTML = keysRu[i];
+            lang = 'ru';
+            localStorage.setItem('lang', lang);
          } else {
             keysArr[i].innerHTML = keys[i];
+            lang = 'en';
+            localStorage.setItem('lang', lang);
          }
       }
    }
@@ -172,6 +183,19 @@ const keyUpEvent = (e) => {
          keysArr[i].classList.remove('active');
       }
    }
+   if (e.ctrlKey && e.altKey) {
+      for (let i = 0; i < keysArr.length; i++) {
+         if (keysArr[i].innerHTML === keys[i]) {
+            keysArr[i].innerHTML = keysRu[i];
+            lang = 'ru';
+            localStorage.setItem('lang', lang);
+         } else {
+            keysArr[i].innerHTML = keys[i];
+            lang = 'en';
+            localStorage.setItem('lang', lang);
+         }
+      }
+   }
 };
 
 const isCapsLock = () => {
@@ -188,12 +212,6 @@ keysArr.forEach(key => {
       key.classList.add('active');
    });
    key.addEventListener('mouseup', () => {
-      key.classList.remove('active');
-   });
-   key.addEventListener('keydown', () => {
-      key.classList.add('active');
-   });
-   key.addEventListener('keyup', () => {
       key.classList.remove('active');
    });
    key.addEventListener('click', () => {
@@ -213,7 +231,6 @@ keysArr.forEach(key => {
          }
          value = '';
          TEXTAREA_INPUT.value += value;
-         console.log(value);
 
          break;
 
@@ -238,12 +255,29 @@ keysArr.forEach(key => {
          value = isCapsLock() ? key.innerHTML.toUpperCase() : key.innerHTML.toLowerCase();
          TEXTAREA_INPUT.value += value;
 
-         console.log(TEXTAREA_INPUT.value);
-
          break;
       }
    });
 });
+
+function setLocalStorage() {
+   localStorage.setItem('lang', lang);
+}
+
+function getLocalStorage() {
+   if (localStorage.getItem('lang') === 'en') {
+      for (let i = 0; i < keysArr.length; i++) {
+         keysArr[i].innerHTML = keys[i];
+      }
+   } else {
+      for (let i = 0; i < keysArr.length; i++) {
+         keysArr[i].innerHTML = keysRu[i];
+      }
+   }
+}
+window.addEventListener('load', getLocalStorage);
+
+window.addEventListener('beforeunload', setLocalStorage);
 
 CONTAINER.classList.add('container');
 TEXTAREA_INPUT.cols = 100;
@@ -258,7 +292,3 @@ KEYBOARD.append(keyboardKeys);
 
 window.addEventListener('keydown', keyDownEvent);
 window.addEventListener('keyup', keyUpEvent);
-// keyboardKeys.addEventListener('mousedown', mouseDown);
-// window.addEventListener('mouseup', mouseUp);
-
-console.log(keysArr);
