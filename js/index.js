@@ -3,10 +3,15 @@ const TEXTAREA_INPUT = document.createElement('textarea');
 const CONTAINER = document.createElement('div');
 const KEYBOARD = document.createElement('div');
 const keyboardKeys = document.createElement('div');
+const HEADING = document.createElement('p');
+
 let row;
 let item;
 
 let keysArr = [];
+
+HEADING.innerHTML = 'Смена языка: Ctrl + Alt. Клавиатура была создана по ОС Windows.';
+HEADING.style.marginTop = '20px';
 
 const createRow = () => {
    row = document.createElement('div');
@@ -487,6 +492,7 @@ keyboardKeys.classList.add('keyboard-keys');
 BODY.append(CONTAINER);
 CONTAINER.append(TEXTAREA_INPUT);
 CONTAINER.append(KEYBOARD);
+CONTAINER.append(HEADING);
 KEYBOARD.append(keyboardKeys);
 
 window.addEventListener('keydown', keyDownEvent);
