@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+.keyboard-wrapper {
+    max-width: 1008px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #a96edf;
+    position: relative;
+}
+
+.row {
+    display: flex;
+}
+
+.keys {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.slash-key {
+    width: 90px;
+}
+
+.backspace-key, .enter-key {
+    width: 120px;
+}
+
+.tab-key {
+    width: 90px;
+}
+
+.capslock-key {
+    width: 128px;
+}
+
+.shift-left {
+    width: 116px;
+}
+
+.shift-right {
+    width: 128px;
+}
+
+.space-key {
+    max-width: 454px;
+    width: 100%;
+    color: #fff;
+}
+
+.keys.active {
+    background-color: #f7cbcb;
+}
+
+.keys.remove {
+    animation: animation-key 0.5s forwards;
+}
+
+@keyframes animation-key {
+    0% {
+        background-color: #f7cbcb;
+    }
+    100% {
+        background-color: #fff;
+    }
+}
