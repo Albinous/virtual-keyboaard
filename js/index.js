@@ -22,13 +22,13 @@ class KeyName {
    }
 }
 
-let keys = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\', 'Del', 'Caps Lock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '"', 'Enter', 'Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '&#9650', 'Shift', 'Ctrl', 'Win', 'Alt', 'Space', 'Alt', '&#5130', '&#9660', '&#5125', 'Ctrl'];
+let keys = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\', 'Caps Lock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '"', 'Enter', 'Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '&#9650', 'Shift', 'Ctrl', 'Win', 'Alt', 'Space', 'Alt', '&#5130', '&#9660', '&#5125', 'Ctrl'];
 
-let keysRu = ['ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '\\', 'Del', 'Caps Lock', 'ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э', 'Enter', 'Shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '.', '&#9650', 'Shift', 'Ctrl', 'Win', 'Alt', 'Пробел', 'Alt', '&#5130', '&#9660', '&#5125', 'Ctrl'];
+let keysRu = ['ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '\\', 'Caps Lock', 'ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э', 'Enter', 'Shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '.', '&#9650', 'Shift', 'Ctrl', 'Win', 'Alt', ' ', 'Alt', '&#5130', '&#9660', '&#5125', 'Ctrl'];
 
-let otherSymbolsEn = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', 'Backspace', 'Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '{', '}', '|', 'Del', 'Caps Lock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ':', '"', 'Enter', 'Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', '<', '>', '?', '&#9650', 'Shift', 'Ctrl', 'Win', 'Alt', 'Space', 'Alt', '&#5130', '&#9660', '&#5125', 'Ctrl'];
+let otherSymbolsEn = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', 'Backspace', 'Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '{', '}', '|', 'Caps Lock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ':', '"', 'Enter', 'Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', '<', '>', '?', '&#9650', 'Shift', 'Ctrl', 'Win', 'Alt', 'Space', 'Alt', '&#5130', '&#9660', '&#5125', 'Ctrl'];
 
-let otherSymbolsRu = ['Ё', '!', '"', '№', ';', '%', ':', '?', '*', '(', ')', '_', '+', 'Backspace', 'Tab', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '/', 'Del', 'Caps Lock', 'ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э', 'Enter', 'Shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', ',', '&#9650', 'Shift', 'Ctrl', 'Win', 'Alt', 'Пробел', 'Alt', '&#5130', '&#9660', '&#5125', 'Ctrl'];
+let otherSymbolsRu = ['Ё', '!', '"', '№', ';', '%', ':', '?', '*', '(', ')', '_', '+', 'Backspace', 'Tab', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '/', 'Caps Lock', 'ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э', 'Enter', 'Shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', ',', '&#9650', 'Shift', 'Ctrl', 'Win', 'Alt', ' ', 'Alt', '&#5130', '&#9660', '&#5125', 'Ctrl'];
 
 function longKey(key) {
    return item.classList.add(`${key}-key`);
@@ -48,36 +48,36 @@ for (let i = 0; i < keys.length; i += 1) {
    if (keys[i] === 'Backspace') {
       keyboardKeys.append(row);
       createRow();
-   } else if (keys[i] === 'Del') {
+   } else if (keys[i] === '\\') {
       keyboardKeys.append(row);
       createRow();
    } else if (keys[i] === 'Enter') {
       keyboardKeys.append(row);
       createRow();
-   } else if (keys[i] === 'Shift' && i === 54) {
+   } else if (keys[i] === 'Shift' && i === 53) {
       item.classList.add('shift-key');
       item.classList.add('shift-right');
       keyboardKeys.append(row);
       createRow();
-   } else if (keys[i] === 'Ctrl' && i === 63) {
+   } else if (keys[i] === 'Ctrl' && i === 62) {
       item.classList.add('ctrl-key');
       item.classList.add('ctrl-right');
       keyboardKeys.append(row);
       createRow();
    }
 
-   if (keys[i] === 'Shift' && i !== 54) {
+   if (keys[i] === 'Shift' && i !== 53) {
       item.classList.add('shift-key');
       item.classList.add('shift-left');
    }
-   if (keys[i] === 'Ctrl' && i !== 63) {
+   if (keys[i] === 'Ctrl' && i !== 62) {
       item.classList.add('ctrl-key');
       item.classList.add('ctrl-left');
    }
-   if (keys[i] === 'Alt' && i !== 60) {
+   if (keys[i] === 'Alt' && i !== 58) {
       item.classList.add('alt-left');
    }
-   if (keys[i] === 'Alt' && i === 60) {
+   if (keys[i] === 'Alt' && i === 58) {
       item.classList.add('alt-key');
       item.classList.add('alt-right');
    }
@@ -94,8 +94,11 @@ for (let i = 0; i < keys.length; i += 1) {
    }
 }
 
+let lang = localStorage.getItem('lang');
+
 const keyDownEvent = (e) => {
-   let lang = localStorage.getItem('lang');
+   lang = localStorage.getItem('lang');
+   let changedLang = lang;
    if (e.ctrlKey && e.altKey) {
       for (let i = 0; i < keysArr.length; i++) {
          if (keysArr[i].innerHTML === keys[i]) {
@@ -106,12 +109,14 @@ const keyDownEvent = (e) => {
       }
       if (lang === 'en') {
          lang = 'ru';
+         changedLang = lang;
          console.log(lang);
-         localStorage.setItem('lang', lang);
+         localStorage.setItem('lang', changedLang);
       } else {
          lang = 'en';
+         changedLang = lang;
          console.log(lang);
-         localStorage.setItem('lang', lang);
+         localStorage.setItem('lang', changedLang);
       }
    }
    for (let i = 0; i < keysArr.length; i++) {
@@ -120,18 +125,22 @@ const keyDownEvent = (e) => {
          e.preventDefault();
          keysArr[i].classList.add('active');
          keysArr[i].classList.remove('remove');
-         if (keysArr[29].classList.contains('active')) {
+         if (keysArr[28].classList.contains('active')) {
             TEXTAREA_INPUT.value += value.toUpperCase();
          } else {
             TEXTAREA_INPUT.value += value;
          }
       }
 
+      if (e.code === keysArr[i].innerHTML) {
+         keysArr[i].classList.add('active');
+      }
+
       if (e.code === 'ShiftLeft' && keysArr[i].classList.contains('shift-left')) {
          keysArr[i].classList.add('active');
          keysArr.forEach((key, index) => {
             let keyIn = key;
-            if (lang === 'en') {
+            if (changedLang === 'en') {
                keyIn.innerHTML = otherSymbolsEn[index];
                if (keyIn.innerHTML.length < 2) {
                   keyIn.innerHTML = keyIn.innerHTML.toUpperCase();
@@ -148,7 +157,7 @@ const keyDownEvent = (e) => {
          keysArr[i].classList.add('active');
          keysArr.forEach((key, index) => {
             let keyIn = key;
-            if (lang === 'en') {
+            if (changedLang === 'en') {
                keyIn.innerHTML = otherSymbolsEn[index];
                if (keyIn.innerHTML.length < 2) {
                   keyIn.innerHTML = keyIn.innerHTML.toUpperCase();
@@ -163,6 +172,14 @@ const keyDownEvent = (e) => {
       }
       if (e.code === 'ControlLeft' && keysArr[i].classList.contains('ctrl-left')) {
          keysArr[i].classList.add('active');
+      }
+      if (e.code === 'Tab' && keysArr[i].classList.contains('tab-key')) {
+         e.preventDefault();
+         keysArr[i].classList.add('active');
+         TEXTAREA_INPUT.value += '    ';
+      }
+      if (e.code === 'Enter' && keysArr[i].classList.contains('enter-key')) {
+         TEXTAREA_INPUT.value += '\n';
       }
       if (e.code === 'ControlRight' && keysArr[i].classList.contains('ctrl-right')) {
          keysArr[i].classList.add('active');
@@ -179,22 +196,56 @@ const keyDownEvent = (e) => {
 
       if (e.code === 'CapsLock' && keysArr[i].classList.contains('capslock-key')) {
          keysArr[i].classList.toggle('active');
+         if (keysArr[i].classList.contains('active')) {
+            keysArr.forEach((key) => {
+               let keyIn = key;
+               if (keyIn.innerHTML.length < 2) {
+                  keyIn.innerHTML = keyIn.innerHTML.toUpperCase();
+               }
+            });
+         } else {
+            keysArr.forEach((key) => {
+               let keyIn = key;
+               if (keyIn.innerHTML.length < 2) {
+                  keyIn.innerHTML = keyIn.innerHTML.toLowerCase();
+               }
+            });
+         }
+      }
+
+      if (e.key === 'ArrowUp' && keysArr[i].innerHTML === '▲') {
+         keysArr[i].classList.add('active');
+      }
+
+      if (e.key === 'ArrowLeft' && keysArr[i].innerHTML === 'ᐊ') {
+         keysArr[i].classList.add('active');
+      }
+
+      if (e.key === 'ArrowDown' && keysArr[i].innerHTML === '▼') {
+         keysArr[i].classList.add('active');
+      }
+
+      if (e.key === 'ArrowRight' && keysArr[i].innerHTML === 'ᐅ') {
+         keysArr[i].classList.add('active');
       }
    }
 };
 
 const keyUpEvent = (e) => {
-   let lang = localStorage.getItem('lang');
+   lang = localStorage.getItem('lang');
+   let changedLang = lang;
    if (e.ctrlKey && e.altKey) {
       for (let i = 0; i < keysArr.length; i++) {
          if (keysArr[i].innerHTML === keys[i]) {
             keysArr[i].innerHTML = keysRu[i];
             lang = 'en';
-            localStorage.setItem('lang', lang);
+            changedLang = lang;
+            localStorage.setItem('lang', changedLang);
          } else {
             keysArr[i].innerHTML = keys[i];
             lang = 'ru';
-            localStorage.setItem('lang', lang);
+            changedLang = lang;
+            localStorage.setItem('lang', changedLang);
          }
       }
    }
@@ -208,7 +259,7 @@ const keyUpEvent = (e) => {
          keysArr[i].classList.remove('active');
          keysArr.forEach((key, index) => {
             let keyIn = key;
-            if (lang === 'en') {
+            if (changedLang === 'en') {
                keyIn.innerHTML = keys[index];
                if (keyIn.innerHTML.length < 2) {
                   keyIn.innerHTML = keyIn.innerHTML.toLowerCase();
@@ -225,7 +276,7 @@ const keyUpEvent = (e) => {
          keysArr[i].classList.remove('active');
          keysArr.forEach((key, index) => {
             let keyIn = key;
-            if (lang === 'en') {
+            if (changedLang === 'en') {
                keyIn.innerHTML = keys[index];
                if (keyIn.innerHTML.length < 2) {
                   keyIn.innerHTML = keyIn.innerHTML.toLowerCase();
@@ -238,7 +289,14 @@ const keyUpEvent = (e) => {
             }
          });
       }
+      if (e.code === keysArr[i].innerHTML) {
+         keysArr[i].classList.remove('active');
+      }
+
       if (e.code === 'ControlLeft' && keysArr[i].classList.contains('ctrl-left')) {
+         keysArr[i].classList.remove('active');
+      }
+      if (e.code === 'Tab' && keysArr[i].classList.contains('tab-key')) {
          keysArr[i].classList.remove('active');
       }
       if (e.code === 'ControlRight' && keysArr[i].classList.contains('ctrl-right')) {
@@ -253,11 +311,27 @@ const keyUpEvent = (e) => {
       if (e.code === 'MetaLeft' && keysArr[i].classList.contains('win-key')) {
          keysArr[i].classList.remove('active');
       }
+
+      if (e.key === 'ArrowUp' && keysArr[i].innerHTML === '▲') {
+         keysArr[i].classList.remove('active');
+      }
+
+      if (e.key === 'ArrowLeft' && keysArr[i].innerHTML === 'ᐊ') {
+         keysArr[i].classList.remove('active');
+      }
+
+      if (e.key === 'ArrowDown' && keysArr[i].innerHTML === '▼') {
+         keysArr[i].classList.remove('active');
+      }
+
+      if (e.key === 'ArrowRight' && keysArr[i].innerHTML === 'ᐅ') {
+         keysArr[i].classList.remove('active');
+      }
    }
 };
 
 const isCapsLock = () => {
-   if (keysArr[29].classList.contains('active')) {
+   if (keysArr[28].classList.contains('active')) {
       return true;
    }
    return false;
@@ -266,24 +340,24 @@ const isCapsLock = () => {
 let counter = 0;
 
 keysArr.forEach(key => {
-   let lang = localStorage.getItem('lang');
    key.addEventListener('mousedown', () => {
       key.classList.add('active');
+      console.log(lang);
       if (key.innerHTML === 'Shift') {
-         keysArr.forEach((keyMouse, index) => {
-            let keyIn = keyMouse;
+         for (let i = 0; i < keysArr.length; i++) {
+            let keyIn = keysArr[i];
             if (lang === 'en') {
-               keyIn.innerHTML = otherSymbolsEn[index];
+               keyIn.innerHTML = otherSymbolsEn[i];
                if (keyIn.innerHTML.length < 2) {
                   keyIn.innerHTML = keyIn.innerHTML.toUpperCase();
                }
             } else {
-               keyIn.innerHTML = otherSymbolsRu[index];
+               keyIn.innerHTML = otherSymbolsRu[i];
                if (keyIn.innerHTML.length < 2) {
                   keyIn.innerHTML = keyIn.innerHTML.toUpperCase();
                }
             }
-         });
+         }
       }
    });
    key.addEventListener('mouseup', () => {
@@ -323,6 +397,22 @@ keysArr.forEach(key => {
          value = '';
          TEXTAREA_INPUT.value += value;
 
+         if (key.classList.contains('active')) {
+            keysArr.forEach((keyIn) => {
+               let keyClick = keyIn;
+               if (keyClick.innerHTML.length < 2) {
+                  keyClick.innerHTML = keyIn.innerHTML.toUpperCase();
+               }
+            });
+         } else {
+            keysArr.forEach((keyIn) => {
+               let keyClick = keyIn;
+               if (keyClick.innerHTML.length < 2) {
+                  keyClick.innerHTML = keyClick.innerHTML.toLowerCase();
+               }
+            });
+         }
+
          break;
 
       case 'Enter':
@@ -344,6 +434,18 @@ keysArr.forEach(key => {
          value = '';
          TEXTAREA_INPUT.value += value;
          break;
+      case 'Ctrl':
+         value = '';
+         TEXTAREA_INPUT.value += value;
+         break;
+      case 'Win':
+         value = '';
+         TEXTAREA_INPUT.value += value;
+         break;
+      case 'Alt':
+         value = '';
+         TEXTAREA_INPUT.value += value;
+         break;
       default:
          value = key.innerHTML.toLowerCase();
 
@@ -356,7 +458,7 @@ keysArr.forEach(key => {
 });
 
 function setLocalStorage() {
-   let lang = localStorage.getItem('lang');
+   lang = localStorage.getItem('lang');
    localStorage.setItem('lang', lang);
 }
 

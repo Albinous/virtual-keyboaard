@@ -50,6 +50,10 @@ textarea {
     cursor: pointer;
 }
 
+.slash-key {
+    width: 90px;
+}
+
 .backspace-key, .enter-key {
     width: 120px;
 }
