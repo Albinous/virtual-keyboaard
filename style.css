@@ -48,10 +48,15 @@ textarea {
     margin: 4px;
     transition: 0.3s;
     cursor: pointer;
+    color: #000;
 }
 
 .backspace-key, .enter-key {
     width: 120px;
+}
+
+.slash-key {
+    width: 90px;
 }
 
 .tab-key {
